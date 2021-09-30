@@ -1,7 +1,7 @@
 # Password Generator 
 
 ## Purpose
-A website that offers fitness training services. 
+A website that offers random password generation based on user selected criteria. 
 
 ## Built With
 * Javascript
