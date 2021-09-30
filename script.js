@@ -5,6 +5,11 @@ var passwordLowerC = ["q","w","e","r","y","u","i","o","p","l","k","j","h","g","f
 var passwordSpecialC = ["!","#","$","%","&","(",")","*","+",",","-",".","/",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"];
 var passwordNumberC = ["1","2","3","4","5","6","7","8","9","0"];
 
+var randomNumber = function () {
+  var item = passwordLengthC[Math.floor(Math.random()*passwordLengthC.length)];
+  return item;
+};
+
 
 
 var passwordLength = function(){
@@ -59,6 +64,22 @@ var passwordNumber = function(){
     // add number
     passwordLengthC = passwordLengthC.concat(passwordNumberC);
   }
+};
+
+
+var generatePassword = function(){
+  var length = passwordLength();
+  passwordUpper();
+  passwordLower();
+  passwordSpecial();
+  passwordNumber();
+  console.log(passwordLengthC);
+  var passwordInput = "";
+  for (let i = 0; i < length; i++) {
+    passwordInput += randomNumber();
+    
+  }
+  return passwordInput;
 };
 
 // Get references to the #generate element
