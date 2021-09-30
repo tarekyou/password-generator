@@ -22,6 +22,45 @@ var passwordLength = function(){
   };
 };
 
+
+var passwordUpper = function(){
+  
+  
+   var upperPrompt= window.confirm("Include uppercase characters?");
+    if(upperPrompt) {
+      passwordLengthC = passwordLengthC.concat(passwordUpperC);
+    }
+};
+
+var passwordLower = function() {
+  
+  var lowerPrompt = window.confirm("Include lower case characters?");
+  if(lowerPrompt){
+    // add lowercase
+     passwordLengthC = passwordLengthC.concat(passwordLowerC) ;
+  }
+
+};
+
+
+var passwordSpecial = function() {
+  
+  var specialPrompt = window.confirm("Include special characters?");
+  if (specialPrompt) {
+    // add special
+    passwordLengthC = passwordLengthC.concat(passwordSpecialC);
+  }
+};
+
+var passwordNumber = function(){
+  
+  var numberPrompt = window.confirm("Include numbers?");
+  if (numberPrompt) {
+    // add number
+    passwordLengthC = passwordLengthC.concat(passwordNumberC);
+  }
+};
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
